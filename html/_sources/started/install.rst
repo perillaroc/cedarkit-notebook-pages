@@ -1,7 +1,7 @@
 安装
 =====
 
-本节介绍如何在 CMA 国家级超算子系统 1 上安装 cedarkit 工具栈。
+本节介绍如何在 CMA 国家级气象超算子系统 1 (CMA-HPC2023-SC1) 上安装 cedarkit 工具栈。
 
 cedarkit 工具栈
 ----------------
@@ -45,20 +45,13 @@ cedarkit 工具栈均在 GitHub 开源，并可以通过 pip 安装。
 预安装环境
 ----------
 
-CMA 国家级超算子系统 1 和 2 可以使用 **wangdp** 账户预安装 conda 环境 (**py312-cedar**) 进行测试，使用方法如下：
+CMA 国家级气象超算子系统 1 和 2 可以使用 **wangdp** 账户预安装 miniforge3 环境 (**py312-cedar**) 进行测试，使用方法如下：
 
-激活 conda 环境
-
-.. code-block:: bash
-
-    module load conda/2023.03.01
-    eval "$(/g1/app/apps/anaconda/2023.03.01/condabin/conda shell.bash hook)"
-
-添加 wangdp 账户 conda 环境目录
+激活 miniforge3 环境
 
 .. code-block:: bash
 
-    conda config --add envs_dirs /g1/u/wangdp/.conda/envs
+    . /g1/u/wangdp/start_miniforge3.sh
 
 激活 py312-cedar 环境
 

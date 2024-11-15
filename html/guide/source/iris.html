@@ -14,39 +14,42 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -60,10 +63,9 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'guide/source/iris';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="天擎大数据云平台" href="cmadaas.html" />
-    <link rel="prev" title="earthkit-data" href="earthkit-data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -71,31 +73,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -103,7 +90,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,10 +97,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -123,7 +114,10 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -138,6 +132,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -151,15 +147,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -177,29 +169,28 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">基本用法</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../basic/graph/index.html">绘图种类</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../basic/graph/index.html">绘图种类</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../basic/graph/contour.html">等值线</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../basic/graph/contourf.html">填充图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../basic/graph/barb.html">风场图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../basic/graph/combine.html">叠加图</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">指南</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">数据源</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="local.html">本地文件</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">数据源</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="local.html">本地文件</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="pygrib.html">pygrib</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cfgrib.html">cfgrib</a></li>
 <li class="toctree-l3"><a class="reference internal" href="earthkit-data.html">earthkit-data</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">iris</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="cmadaas.html">天擎大数据云平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="godas.html">CEMC格点数据平台</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../domain/index.html">底图布局</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../domain/index.html">底图布局</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../domain/east_asia.html">东亚/中国</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../domain/cn_area.html">中国区域</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../domain/north_polar.html">北半球</a></li>
@@ -208,12 +199,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../domain/global_area.html">全球区域</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../domain/ens_cn.html">中国区域集合邮票图</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../map/index.html">地图</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../map/index.html">地图</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../map/default.html">默认地图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map/cemc.html">CEMC地图</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -229,7 +220,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -238,14 +229,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -368,27 +359,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -446,12 +429,12 @@ document.write(`
 </div>
 </div>
 </div>
-<p>设置绘图的数据参数，使用 CMA-MESO 2024 年 4 月 1 日 00 时次 024 时效数据。</p>
+<p>设置绘图的数据参数，使用 CMA-MESO 2024 年 11 月 14 日 00 时次 024 时效数据。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system_name</span> <span class="o">=</span> <span class="s2">&quot;CMA-MESO&quot;</span>
-<span class="n">data_type</span> <span class="o">=</span> <span class="s2">&quot;cma_meso_3km/grib2/orig&quot;</span>
-<span class="n">start_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s2">&quot;2024-04-01 00:00:00&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system_name</span> <span class="o">=</span> <span class="s2">&quot;CMA-GFS&quot;</span>
+<span class="n">data_type</span> <span class="o">=</span> <span class="s2">&quot;cma_gfs_gmf/grib2/orig&quot;</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s2">&quot;2024-11-14 00:00:00&quot;</span><span class="p">)</span>
 <span class="n">forecast_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="s2">&quot;24h&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -461,18 +444,15 @@ document.write(`
 <section id="id3">
 <h2>加载数据<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>设置 GRIB2 数据文件路径</p>
-<blockquote>
-<div><p>注：可以使用 reki 库查找本地文件路径</p>
-</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/g3/COMMONDATA/OPER/CEMC/MESO_3KM/Prod-grib/2024040100/ORIG/rmf.hgra.2024040100024.grb2&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2024111400/ORIG/gmf.gra.2024111400024.grb2&#39;</span>
 <span class="n">file_path</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/g3/COMMONDATA/OPER/CEMC/MESO_3KM/Prod-grib/2024040100/ORIG/rmf.hgra.2024040100024.grb2&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2024111400/ORIG/gmf.gra.2024111400024.grb2&#39;
 </pre></div>
 </div>
 </div>
@@ -505,7 +485,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/MESO_3KM/Prod-grib/2024040100/ORIG/rmf.hgra.2024040100024.grb2&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2024111400/ORIG/gmf.gra.2024111400024.grb2&#39;)
 </pre></div>
 </div>
 </div>
@@ -514,16 +494,147 @@ document.write(`
 <p>使用 iris 加载温度要素场</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubes</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;air_temperature&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cubes = iris.load(file_path, &quot;air_temperature&quot;)</span>
+<span class="n">cubes</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cubes</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0: air_temperature / (K)               (latitude: 1671; longitude: 2501)
-1: air_temperature / (K)               (latitude: 1671; longitude: 2501)
-2: air_temperature / (K)               (pressure: 21; latitude: 1671; longitude: 2501)
-3: air_temperature / (K)               (unknown: 4; latitude: 1671; longitude: 2501)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># cubes = iris.load(file_path, &quot;air_temperature&quot;)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">cubes</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">cubes</span><span class="p">)</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/__init__.py:661,</span> in <span class="ni">load</span><span class="nt">(uris, constraints, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">637</span> <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">uris</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">638</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Load any number of Cubes for each constraint.</span>
+<span class="g g-Whitespace">    </span><span class="mi">639</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">640</span><span class="sd">     For a full description of the arguments, please see the module</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">660</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">661</span>     <span class="n">cubes</span> <span class="o">=</span> <span class="n">_load_collection</span><span class="p">(</span><span class="n">uris</span><span class="p">,</span> <span class="n">constraints</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span><span class="o">.</span><span class="n">combined</span><span class="p">()</span><span class="o">.</span><span class="n">cubes</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">662</span>     <span class="k">return</span> <span class="n">cubes</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/__init__.py:309,</span> in <span class="ni">_load_collection</span><span class="nt">(uris, constraints, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">_MULTIREF_DETECTION</span><span class="o">.</span><span class="n">found_multiple_refs</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="n">cubes</span> <span class="o">=</span> <span class="n">_generate_cubes</span><span class="p">(</span><span class="n">uris</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">constraints</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">309</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">_CubeFilterCollection</span><span class="o">.</span><span class="n">from_cubes</span><span class="p">(</span><span class="n">cubes</span><span class="p">,</span> <span class="n">constraints</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span> <span class="k">except</span> <span class="ne">EOFError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>     <span class="k">raise</span> <span class="n">iris</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TranslationError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span>         <span class="s2">&quot;The file appears empty or incomplete: </span><span class="si">{!r}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">313</span>     <span class="p">)</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/cube.py:110,</span> in <span class="ni">_CubeFilterCollection.from_cubes</span><span class="nt">(cubes, constraints)</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">_CubeFilter</span><span class="p">(</span><span class="n">constraint</span><span class="p">)</span> <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="n">collection</span> <span class="o">=</span> <span class="n">_CubeFilterCollection</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">110</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cubes</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="n">collection</span><span class="o">.</span><span class="n">add_cube</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="k">return</span> <span class="n">collection</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/__init__.py:281,</span> in <span class="ni">_generate_cubes</span><span class="nt">(uris, callback, constraints)</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="k">if</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="n">part_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">281</span>     <span class="k">for</span> <span class="n">cube</span> <span class="ow">in</span> <span class="n">iris</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">load_files</span><span class="p">(</span><span class="n">part_names</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">constraints</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="k">yield</span> <span class="n">cube</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span> <span class="k">elif</span> <span class="n">scheme</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;https&quot;</span><span class="p">]:</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/io/__init__.py:222,</span> in <span class="ni">load_files</span><span class="nt">(filenames, callback, constraints)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="k">yield</span> <span class="n">cube</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">for</span> <span class="n">cube</span> <span class="ow">in</span> <span class="n">handling_format_spec</span><span class="o">.</span><span class="n">handler</span><span class="p">(</span><span class="n">fnames</span><span class="p">,</span> <span class="n">callback</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>         <span class="k">yield</span> <span class="n">cube</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/fileformats/rules.py:495,</span> in <span class="ni">load_cubes</span><span class="nt">(filenames, user_callback, loader, filter_function)</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span> <span class="n">all_fields_and_filenames</span> <span class="o">=</span> <span class="n">_generate_all_fields_and_filenames</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">495</span> <span class="k">for</span> <span class="n">cube</span><span class="p">,</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">_load_pairs_from_fields_and_filenames</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>     <span class="n">all_fields_and_filenames</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>     <span class="n">converter</span><span class="o">=</span><span class="n">loader</span><span class="o">.</span><span class="n">converter</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="n">user_callback_wrapper</span><span class="o">=</span><span class="n">loadcubes_user_callback_wrapper</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="k">yield</span> <span class="n">cube</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/fileformats/rules.py:420,</span> in <span class="ni">_load_pairs_from_fields_and_filenames</span><span class="nt">(fields_and_filenames, converter, user_callback_wrapper)</span>
+<span class="g g-Whitespace">    </span><span class="mi">416</span> <span class="n">results_needing_reference</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">418</span> <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">fields_and_filenames</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">419</span>     <span class="c1"># Convert the field to a Cube, passing down the &#39;converter&#39; function.</span>
+<span class="ne">--&gt; </span><span class="mi">420</span>     <span class="n">cube</span><span class="p">,</span> <span class="n">factories</span><span class="p">,</span> <span class="n">references</span> <span class="o">=</span> <span class="n">_make_cube</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">converter</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">422</span>     <span class="c1"># Post modify the new cube with a user-callback.</span>
+<span class="g g-Whitespace">    </span><span class="mi">423</span>     <span class="c1"># This is an ordinary Iris load callback, so it takes the filename.</span>
+<span class="g g-Whitespace">    </span><span class="mi">424</span>     <span class="n">cube</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">run_callback</span><span class="p">(</span><span class="n">user_callback_wrapper</span><span class="p">,</span> <span class="n">cube</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris/fileformats/rules.py:326,</span> in <span class="ni">_make_cube</span><span class="nt">(field, converter)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">def</span> <span class="nf">_make_cube</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">converter</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="c1"># Convert the field to a Cube.</span>
+<span class="ne">--&gt; </span><span class="mi">326</span>     <span class="n">metadata</span> <span class="o">=</span> <span class="n">converter</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>     <span class="n">cube_data</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">core_data</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>     <span class="n">cube</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">cube</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>         <span class="n">cube_data</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span>         <span class="n">attributes</span><span class="o">=</span><span class="n">metadata</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span>         <span class="n">aux_coords_and_dims</span><span class="o">=</span><span class="n">metadata</span><span class="o">.</span><span class="n">aux_coords_and_dims</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span>     <span class="p">)</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris_grib/_load_convert.py:2779,</span> in <span class="ni">convert</span><span class="nt">(field)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2776</span>     <span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;aux_coords_and_dims&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2778</span>     <span class="c1"># Convert GRIB2 message to cube metadata.</span>
+<span class="ne">-&gt; </span><span class="mi">2779</span>     <span class="n">grib2_convert</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2781</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">ConversionMetadata</span><span class="o">.</span><span class="n">_make</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="g g-Whitespace">   </span><span class="mi">2782</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris_grib/_load_convert.py:2728,</span> in <span class="ni">grib2_convert</span><span class="nt">(field, metadata)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2725</span> <span class="n">grid_definition_section</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">metadata</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2727</span> <span class="c1"># Section 4 - Product Definition Section (Product Definition Template)</span>
+<span class="ne">-&gt; </span><span class="mi">2728</span> <span class="n">product_definition_section</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2729</span>     <span class="n">field</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">2730</span>     <span class="n">metadata</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2731</span>     <span class="n">field</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;discipline&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">2732</span>     <span class="n">field</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;tablesVersion&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">2733</span>     <span class="n">rt_coord</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2734</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2736</span> <span class="c1"># Section 5 - Data Representation Section (Data Representation Template)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2737</span> <span class="n">data_representation_section</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris_grib/_load_convert.py:2587,</span> in <span class="ni">product_definition_section</span><span class="nt">(section, metadata, discipline, tablesVersion, rt_coord)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2583</span>     <span class="n">product_definition_template_6</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">rt_coord</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2584</span> <span class="k">elif</span> <span class="n">template</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2585</span>     <span class="c1"># Process statistically processed values at a horizontal level or in a</span>
+<span class="g g-Whitespace">   </span><span class="mi">2586</span>     <span class="c1"># horizontal layer in a continuous or non-continuous time interval.</span>
+<span class="ne">-&gt; </span><span class="mi">2587</span>     <span class="n">product_definition_template_8</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">rt_coord</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2588</span> <span class="k">elif</span> <span class="n">template</span> <span class="o">==</span> <span class="mi">9</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2589</span>     <span class="n">probability</span> <span class="o">=</span> <span class="n">product_definition_template_9</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">rt_coord</span><span class="p">)</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris_grib/_load_convert.py:2226,</span> in <span class="ni">product_definition_template_8</span><span class="nt">(section, metadata, frt_coord)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2223</span> <span class="n">data_cutoff</span><span class="p">(</span><span class="n">section</span><span class="p">[</span><span class="s2">&quot;hoursAfterDataCutoff&quot;</span><span class="p">],</span> <span class="n">section</span><span class="p">[</span><span class="s2">&quot;minutesAfterDataCutoff&quot;</span><span class="p">])</span>
+<span class="g g-Whitespace">   </span><span class="mi">2225</span> <span class="c1"># Create a cell method to represent the time statistic.</span>
+<span class="ne">-&gt; </span><span class="mi">2226</span> <span class="n">time_statistic_cell_method</span> <span class="o">=</span> <span class="n">statistical_cell_method</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2227</span> <span class="c1"># Add the forecast cell method to the metadata.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2228</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;cell_methods&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time_statistic_cell_method</span><span class="p">)</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris_grib/_load_convert.py:2051,</span> in <span class="ni">statistical_cell_method</span><span class="nt">(section)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2036</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2037</span><span class="sd"> Create a cell method representing a time statistic.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2038</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2048</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">2049</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2050</span> <span class="c1"># Handle the number of time ranges -- we currently only support one.</span>
+<span class="ne">-&gt; </span><span class="mi">2051</span> <span class="n">n_time_ranges</span> <span class="o">=</span> <span class="n">section</span><span class="p">[</span><span class="s2">&quot;numberOfTimeRange&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2052</span> <span class="k">if</span> <span class="n">n_time_ranges</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2053</span>     <span class="k">if</span> <span class="n">n_time_ranges</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+<span class="nn">File /g4/wangdp/lang/miniforge/miniforge3/envs/py312-cedar/lib/python3.12/site-packages/iris_grib/message.py:462,</span> in <span class="ni">Section.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>             <span class="n">emsg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> not defined in section </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_number</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">462</span>             <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_key_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="ne">KeyError</span>: &#39;numberOfTimeRange not defined in section 4&#39;
 </pre></div>
 </div>
 </div>
@@ -585,7 +696,7 @@ document.write(`
       margin-top: 7px;
   }
 </style>
-<table class="iris" id="22970373245840">
+<table class="iris" id="23254715005312">
     <tr class="iris">
 <th class="iris iris-word-cell">Air Temperature (K)</th>
 <th class="iris iris-word-cell">latitude</th>
@@ -1024,7 +1135,7 @@ Coordinates:
     forecast_period          timedelta64[ns] 8B ...
     forecast_reference_time  datetime64[ns] 8B ...
     height                   float64 8B ...
-    time                     datetime64[ns] 8B ...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'air_temperature'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1671</li><li><span class='xr-has-index'>longitude</span>: 2501</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-daa6d364-b69e-4af8-bc14-7b319bd3a10d' class='xr-array-in' type='checkbox' checked><label for='section-daa6d364-b69e-4af8-bc14-7b319bd3a10d' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1671, 2501), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+    time                     datetime64[ns] 8B ...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'air_temperature'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1671</li><li><span class='xr-has-index'>longitude</span>: 2501</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-25f3009b-b845-42d0-b1de-1a69febcb4b2' class='xr-array-in' type='checkbox' checked><label for='section-25f3009b-b845-42d0-b1de-1a69febcb4b2' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1671, 2501), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1079,7 +1190,7 @@ Coordinates:
 </svg>
         </td>
     </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-a8e42ced-894b-4498-8378-51ba8147ba05' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a8e42ced-894b-4498-8378-51ba8147ba05' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>60.1 60.07 60.04 ... 10.03 10.0</div><input id='attrs-0422ebca-2bcd-47c6-98f2-aecf98f19a21' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0422ebca-2bcd-47c6-98f2-aecf98f19a21' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-22ad08a0-e3c4-4ec9-8760-f4886d3acba2' class='xr-var-data-in' type='checkbox'><label for='data-22ad08a0-e3c4-4ec9-8760-f4886d3acba2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([60.099998, 60.069998, 60.039998, ..., 10.059998, 10.029998,  9.999998])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>70.0 70.03 70.06 ... 145.0 145.0</div><input id='attrs-d156f3c8-c7b3-4786-9250-bf365bd27ce5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d156f3c8-c7b3-4786-9250-bf365bd27ce5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0d4b0bce-daec-46e3-b118-75573002bf09' class='xr-var-data-in' type='checkbox'><label for='data-0d4b0bce-daec-46e3-b118-75573002bf09' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([ 70.  ,  70.03,  70.06, ..., 144.94, 144.97, 145.  ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>forecast_period</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3fdf8639-a10a-4b1e-bed1-61c49b4da2cb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3fdf8639-a10a-4b1e-bed1-61c49b4da2cb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-079aa0de-588c-434d-a94e-e13dcbfb3ae7' class='xr-var-data-in' type='checkbox'><label for='data-079aa0de-588c-434d-a94e-e13dcbfb3ae7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_period</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=timedelta64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>forecast_reference_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c5024361-2a23-4f3f-8058-355677e2f3f3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c5024361-2a23-4f3f-8058-355677e2f3f3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-56d15e90-af6a-4dbc-b59e-69c2dbb9271e' class='xr-var-data-in' type='checkbox'><label for='data-56d15e90-af6a-4dbc-b59e-69c2dbb9271e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-161221e8-18bf-41e0-96c9-9ed66c32b561' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-161221e8-18bf-41e0-96c9-9ed66c32b561' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b2ba4587-ef53-469f-954f-c432a49b2d65' class='xr-var-data-in' type='checkbox'><label for='data-b2ba4587-ef53-469f-954f-c432a49b2d65' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>height</dd><dt><span>units :</span></dt><dd>m</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-553f03c2-a23c-489d-8704-3f4030305d1a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-553f03c2-a23c-489d-8704-3f4030305d1a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0f33da5d-ac69-492a-a28b-238bb324b29d' class='xr-var-data-in' type='checkbox'><label for='data-0f33da5d-ac69-492a-a28b-238bb324b29d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-37e6c27d-ecfc-4f00-8151-f6f23bf88d1d' class='xr-section-summary-in' type='checkbox'  ><label for='section-37e6c27d-ecfc-4f00-8151-f6f23bf88d1d' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a6120244-156a-43cc-ba83-dfacd4d3e20c' class='xr-index-data-in' type='checkbox'/><label for='index-a6120244-156a-43cc-ba83-dfacd4d3e20c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([         60.099998,          60.069998,          60.039998,
+</table></div></div></li><li class='xr-section-item'><input id='section-ddef5d1f-f055-4e9b-8899-99da31b744ee' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ddef5d1f-f055-4e9b-8899-99da31b744ee' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>60.1 60.07 60.04 ... 10.03 10.0</div><input id='attrs-da9d7e99-fc4c-4304-8089-e34fdcedf8b1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-da9d7e99-fc4c-4304-8089-e34fdcedf8b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-41776899-346f-4ef5-9848-87dfbe9d4966' class='xr-var-data-in' type='checkbox'><label for='data-41776899-346f-4ef5-9848-87dfbe9d4966' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([60.099998, 60.069998, 60.039998, ..., 10.059998, 10.029998,  9.999998])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>70.0 70.03 70.06 ... 145.0 145.0</div><input id='attrs-81322b61-b7ad-4339-8a7a-37d78126ec44' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-81322b61-b7ad-4339-8a7a-37d78126ec44' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-20103a43-1c52-44e0-95d1-5047b851c2c4' class='xr-var-data-in' type='checkbox'><label for='data-20103a43-1c52-44e0-95d1-5047b851c2c4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([ 70.  ,  70.03,  70.06, ..., 144.94, 144.97, 145.  ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>forecast_period</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2077af12-9d21-426e-8ffd-e0f9f4f38e9c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2077af12-9d21-426e-8ffd-e0f9f4f38e9c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-88b565e5-858f-4434-94c7-9699a37b03d8' class='xr-var-data-in' type='checkbox'><label for='data-88b565e5-858f-4434-94c7-9699a37b03d8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_period</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=timedelta64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>forecast_reference_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1c2068d6-c163-4077-b925-28c87c9cc75e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1c2068d6-c163-4077-b925-28c87c9cc75e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3b64faf8-2313-4c0f-9ce3-647f176535cb' class='xr-var-data-in' type='checkbox'><label for='data-3b64faf8-2313-4c0f-9ce3-647f176535cb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9b3e7498-8f9a-47f5-b471-0c0563741a73' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9b3e7498-8f9a-47f5-b471-0c0563741a73' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-43a71604-ae9e-4e03-999a-bed5cab1a891' class='xr-var-data-in' type='checkbox'><label for='data-43a71604-ae9e-4e03-999a-bed5cab1a891' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>height</dd><dt><span>units :</span></dt><dd>m</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8d081be5-30be-4696-a115-355b4ba81ed3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8d081be5-30be-4696-a115-355b4ba81ed3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d0f7f2c1-81a3-4b52-a7d5-9f4ec1812f75' class='xr-var-data-in' type='checkbox'><label for='data-d0f7f2c1-81a3-4b52-a7d5-9f4ec1812f75' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2004e7e0-bc5c-477c-89ca-a69eae7291f2' class='xr-section-summary-in' type='checkbox'  ><label for='section-2004e7e0-bc5c-477c-89ca-a69eae7291f2' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-6d595829-ef23-4ecc-bce4-47d1977099b2' class='xr-index-data-in' type='checkbox'/><label for='index-6d595829-ef23-4ecc-bce4-47d1977099b2' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([         60.099998,          60.069998,          60.039998,
        60.009997999999996,          59.979998,          59.949998,
                 59.919998,          59.889998,          59.859998,
        59.829997999999996,
@@ -1088,7 +1199,7 @@ Coordinates:
        10.179997999999998, 10.149998000000004, 10.119998000000002,
        10.089998000000001,          10.059998, 10.029997999999999,
         9.999997999999998],
-      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1671))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-dcbab83b-2294-49f7-9948-b3ae53311b97' class='xr-index-data-in' type='checkbox'/><label for='index-dcbab83b-2294-49f7-9948-b3ae53311b97' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([              70.0,              70.03,              70.06,
+      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1671))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-07e422cf-0a55-4443-9c1e-8f9ce4ce4209' class='xr-index-data-in' type='checkbox'/><label for='index-07e422cf-0a55-4443-9c1e-8f9ce4ce4209' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([              70.0,              70.03,              70.06,
                     70.09,              70.12,              70.15,
                     70.18,              70.21,              70.24,
                     70.27,
@@ -1097,7 +1208,7 @@ Coordinates:
                    144.82,             144.85,             144.88,
                    144.91,             144.94,             144.97,
                     145.0],
-      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2501))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d44604f3-0d39-42a8-a4d2-4e3d3ba7465e' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-d44604f3-0d39-42a8-a4d2-4e3d3ba7465e' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2501))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-db3c4075-23b6-4cb7-8a36-d351b3fa49a9' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-db3c4075-23b6-4cb7-8a36-d351b3fa49a9' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="id4">
@@ -1112,7 +1223,7 @@ Coordinates:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cedarkit.maps.style</span> <span class="kn">import</span> <span class="n">ContourStyle</span>
 <span class="kn">from</span> <span class="nn">cedarkit.maps.chart</span> <span class="kn">import</span> <span class="n">Panel</span>
-<span class="kn">from</span> <span class="nn">cedarkit.maps.domains</span> <span class="kn">import</span> <span class="n">EastAsiaMapDomain</span>
+<span class="kn">from</span> <span class="nn">cedarkit.maps.domains</span> <span class="kn">import</span> <span class="n">EastAsiaMapTemplate</span>
 <span class="kn">from</span> <span class="nn">cedarkit.maps.colormap</span> <span class="kn">import</span> <span class="n">get_ncl_colormap</span>
 
 <span class="n">t_2m_level</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">24</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
@@ -1123,7 +1234,7 @@ Coordinates:
     <span class="n">levels</span><span class="o">=</span><span class="n">t_2m_level</span><span class="p">,</span>
     <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">domain</span> <span class="o">=</span> <span class="n">EastAsiaMapDomain</span><span class="p">()</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">EastAsiaMapTemplate</span><span class="p">()</span>
 <span class="n">panel</span> <span class="o">=</span> <span class="n">Panel</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">domain</span><span class="p">)</span>
 <span class="n">panel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_2m_field</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">t_2m_style</span><span class="p">)</span>
 <span class="n">domain</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span>
@@ -1173,27 +1284,9 @@ Coordinates:
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="earthkit-data.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">earthkit-data</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="cmadaas.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">天擎大数据云平台</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1201,7 +1294,8 @@ Coordinates:
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1262,8 +1356,8 @@ By cemc-oper
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

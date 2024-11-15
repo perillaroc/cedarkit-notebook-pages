@@ -47,13 +47,13 @@ contour_style = ContourStyle(
 
 ### 绘制图形
 
-使用内置底图布局 (`EastAsiaMapDomain`) 和高层 API 接口 (`Panel`) 绘制图形
+使用内置底图布局 (`EastAsiaMapTemplate`) 和高层 API 接口 (`Panel`) 绘制图形
 
 ```python
 from cedarkit.maps.chart import Panel
-from cedarkit.maps.domains import EastAsiaMapDomain
+from cedarkit.maps.domains import EastAsiaMapTemplate
 
-domain = EastAsiaMapDomain()
+domain = EastAsiaMapTemplate()
 panel = Panel(domain=domain)
 panel.plot(field, style=contour_style)
 panel.show()
